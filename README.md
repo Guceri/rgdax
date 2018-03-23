@@ -1,4 +1,6 @@
-# rgdax 0.5.0
+
+
+# rgdax 0.5.0 built with sandbox url
 
 [![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)
@@ -54,25 +56,10 @@ The current version does not support the following key capabilities:
 
 ## How to install:
 
-**From CRAN**  
-```
-library(rgdax)
-```
-This is same as installing `master` branch from github.
-
-**From Github dev**
 ```
 library(devtools)
-install_github("DheerajAgarwal/rgdax", ref="dev")
+install_github("DheerajAgarwal/rgdax", ref="sbx")
 ```
-
-## Some Inspirations
-
-[Unofficial Python GDAX Wrapper](https://github.com/danpaquin/gdax-python)  #The real reason I started this project.
-
-[coinbaseexchangeenterorder-r](https://gist.github.com/gsee/b20b3b9893cd74e462a8) #Helped me break the auth calls.
-
-[MTDO's Shiny App](https://github.com/mtdo/shiny-gdax) #For the data cleaning of most public functions.
 
 ## URLs   
 [github CRAN](https://github.com/DheerajAgarwal/rgdax/tree/master)
