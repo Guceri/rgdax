@@ -78,7 +78,7 @@ add_order <- function(api.key,
     )
   }
 
-  order <- toJSON(order_attribs, auto_unbox = FALSE)
+  order <- toJSON(order_attribs, auto_unbox = TRUE)
 
   #fetch response----
   response <-
@@ -95,5 +95,5 @@ add_order <- function(api.key,
   response <- as.data.frame(response)
 
   #return----
-  return(response)
+  #return(response)
 }
