@@ -31,10 +31,10 @@ cancel_order <- function(order_id = "all",
   #get url extension----
   if (order_id == "all"){
     req.url <- "/orders/"
-    print(req.url)
+    #print(req.url)
   } else {
     req.url <- paste0("/orders/",order_id)
-    print(req.url)
+    #print(req.url)
   }
 
 
@@ -55,5 +55,5 @@ cancel_order <- function(order_id = "all",
   response <- as.data.frame(response)
 
   #return----
-  return(response)
+  #return(response)
 }
