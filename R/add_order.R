@@ -17,7 +17,7 @@ add_order <- function (api.key, secret, passphrase, product_id = "LTC-USD",
     stop("Unrecognized sell or buy side. Please select either 'b' or 's'.")
   }
  
-if (postonly) {
+if (post_only) {
     order_attribs <<- list(type = type, price = price, 
     size = size, side = side, product_id = product_id, 
     post_only = "true")
