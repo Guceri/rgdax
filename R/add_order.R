@@ -1,4 +1,4 @@
-function (api.key, secret, passphrase, product_id = "LTC-USD", 
+add_order <- function (api.key, secret, passphrase, product_id = "LTC-USD", 
   type = "limit", side = "b", 
   price = NULL, size, post_only = FALSE) 
 {
