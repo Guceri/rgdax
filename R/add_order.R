@@ -49,6 +49,8 @@ add_order <- function(api.key,
   product_id <- toupper(product_id)
   price <- as.character(price)
   size <- as.character(size)
+  
+ 
 
   if (side == "b") {
     side <- "buy"
@@ -57,27 +59,53 @@ add_order <- function(api.key,
   } else {
     stop("Unrecognized sell or buy side. Please select either 'b' or 's'.")
   }
-
-  #generate order----
-  if (is.null(stop)) {
-    order_attribs <- list(
-      type = type,
-      price = price,
-      size = size,
-      side = side,
-      product_id = product_id
-    )
-  } else {
-    order_attribs <- list(
-      price = price,
-      size = size,
-      side = side,
-      product_id = product_id,
-      stop = stop,
-      stop_price = stop_price
-    )
+    
+    
+ #checkinput value from shiny
+ if (postOnly){
+    #generate order----
+    if (is.null(stop)) {
+      order_attribs <- list(
+        type = type,
+        price = price,
+        size = size,
+        side = side,
+        product_id = product_id,
+        post_only = true
+      )
+    } else {
+      order_attribs <- list(
+       price = price,
+       size = size,
+       side = side,
+       product_id = product_id,
+       stop = stop,
+       stop_price = stop_price
+      )
+   }
+ } else {
+   
+    #generate order----
+    if (is.null(stop)) {
+      order_attribs <- list(
+        type = type,
+        price = price,
+        size = size,
+        side = side,
+        product_id = product_id
+      )
+    } else {
+      order_attribs <- list(
+       price = price,
+       size = size,
+       side = side,
+       product_id = product_id,
+       stop = stop,
+       stop_price = stop_price
+      )
+    } 
   }
-
+    
   order <- toJSON(order_attribs, auto_unbox = TRUE)
 
   #fetch response----
