@@ -119,7 +119,6 @@ auth <- function(method,
       ))
     }
   }
-
   #return----
   return(response)
 }
