@@ -92,8 +92,5 @@ add_order <- function(api.key,
     )
 
   #transform----
-  response <- as.data.frame(response)
-
-  #return----
-  return(response)
+  response <<- as.data.frame(response)
 }
